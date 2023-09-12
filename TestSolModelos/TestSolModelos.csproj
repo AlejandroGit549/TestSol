@@ -41,7 +41,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entidades\Area.cs" />
+    <Compile Include="Entidades\ClaseBase.cs" />
+    <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="UtileriaRespuesta\Ayudantes\Enumradores.cs" />
+    <Compile Include="UtileriaRespuesta\Ayudantes\MensajesRespuesta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UtileriaRespuesta\ModeloRespuesta.cs" />
+    <Compile Include="Utilidades\IOperacionesBasicas.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestSolDatos\TestSolDatos.csproj">
+      <Project>{179921B3-F524-4D01-9259-0262368F98F4}</Project>
+      <Name>TestSolDatos</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
