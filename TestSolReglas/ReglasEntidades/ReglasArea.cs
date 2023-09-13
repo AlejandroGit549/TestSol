@@ -27,15 +27,6 @@ namespace TestSolReglas.ReglasEntidades
             }
         }
         private ReglasArea() { }
-        public ModeloRespuesta Acutalizar(Area Item)
-        {
-            throw new NotImplementedException();
-        }
-        public ModeloRespuesta Eliminar(int Id)
-        {
-            throw new NotImplementedException();
-        }
-
         public ModeloRespuesta Insertar(Area Item)
         {
             ModeloRespuesta resultado = new ModeloRespuesta();
@@ -86,6 +77,16 @@ namespace TestSolReglas.ReglasEntidades
                 resultado.ActualizarRespuesta(CodigosRespuesta.Error, MensajesRespuesta.Error, FolioError);
             }
             return resultado;
+        }
+
+        public ModeloRespuesta Eliminar(Expression<Func<catArea, bool>> expresionLambda, int Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ModeloRespuesta Acutalizar(Expression<Func<catArea, bool>> expresionLambda, Area Item)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReglasEntidades\ReglasArea.cs" />
+    <Compile Include="ReglasEntidades\ReglasEmpleado.cs" />
     <Compile Include="ReglasUtilerias\ReglasLog.cs" />
   </ItemGroup>
   <ItemGroup>
