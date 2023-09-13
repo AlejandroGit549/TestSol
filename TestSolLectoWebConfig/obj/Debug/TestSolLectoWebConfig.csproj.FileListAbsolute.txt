@@ -1,0 +1,6 @@
+C:\git\TestSol\TestSolLectoWebConfig\bin\Debug\TestSolLectoWebConfig.dll
+C:\git\TestSol\TestSolLectoWebConfig\bin\Debug\TestSolLectoWebConfig.pdb
+C:\git\TestSol\TestSolLectoWebConfig\obj\Debug\TestSolLectoWebConfig.csproj.AssemblyReference.cache
+C:\git\TestSol\TestSolLectoWebConfig\obj\Debug\TestSolLectoWebConfig.csproj.CoreCompileInputs.cache
+C:\git\TestSol\TestSolLectoWebConfig\obj\Debug\TestSolLectoWebConfig.dll
+C:\git\TestSol\TestSolLectoWebConfig\obj\Debug\TestSolLectoWebConfig.pdb

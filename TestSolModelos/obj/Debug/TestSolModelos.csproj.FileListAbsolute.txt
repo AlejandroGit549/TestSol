@@ -1,0 +1,12 @@
+C:\git\TestSol\TestSolModelos\bin\Debug\TestSolModelos.dll
+C:\git\TestSol\TestSolModelos\bin\Debug\TestSolModelos.pdb
+C:\git\TestSol\TestSolModelos\bin\Debug\TestSolDatos.dll
+C:\git\TestSol\TestSolModelos\bin\Debug\EntityFramework.dll
+C:\git\TestSol\TestSolModelos\bin\Debug\TestSolDatos.pdb
+C:\git\TestSol\TestSolModelos\bin\Debug\TestSolDatos.dll.config
+C:\git\TestSol\TestSolModelos\bin\Debug\EntityFramework.xml
+C:\git\TestSol\TestSolModelos\obj\Debug\TestSolModelos.csproj.AssemblyReference.cache
+C:\git\TestSol\TestSolModelos\obj\Debug\TestSolModelos.csproj.CoreCompileInputs.cache
+C:\git\TestSol\TestSolModelos\obj\Debug\TestSolModelos.csproj.CopyComplete
+C:\git\TestSol\TestSolModelos\obj\Debug\TestSolModelos.dll
+C:\git\TestSol\TestSolModelos\obj\Debug\TestSolModelos.pdb

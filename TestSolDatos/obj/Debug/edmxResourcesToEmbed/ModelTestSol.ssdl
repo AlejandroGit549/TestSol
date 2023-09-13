@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestSolModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="catArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Fecha_Registro" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Modificacion" Type="datetime" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="opeEmpleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="ApPaterno" Type="varchar" MaxLength="30" />
+    <Property Name="ApMaterno" Type="varchar" MaxLength="30" />
+    <Property Name="FkIdArea" Type="int" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="date" Nullable="false" />
+    <Property Name="Sueldo" Type="money" Nullable="false" />
+    <Property Name="Fecha_Registro" Type="datetime" Nullable="false" />
+    <Property Name="Fecha_Modificacion" Type="datetime" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="opeLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NombreClase" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NombreMetodo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LineaCodigo" Type="int" Nullable="false" />
+    <Property Name="MesajeError" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Fecha_Registro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_opeEmpleado_catArea">
+    <End Role="catArea" Type="Self.catArea" Multiplicity="1" />
+    <End Role="opeEmpleado" Type="Self.opeEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="opeEmpleado">
+        <PropertyRef Name="FkIdArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestSolModelStoreContainer">
+    <EntitySet Name="catArea" EntityType="Self.catArea" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="opeEmpleado" EntityType="Self.opeEmpleado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="opeLog" EntityType="Self.opeLog" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_opeEmpleado_catArea" Association="Self.FK_opeEmpleado_catArea">
+      <End Role="catArea" EntitySet="catArea" />
+      <End Role="opeEmpleado" EntitySet="opeEmpleado" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,12 @@
+C:\git\TestSol\TestSolDatos\bin\Debug\TestSolDatos.dll.config
+C:\git\TestSol\TestSolDatos\bin\Debug\TestSolDatos.dll
+C:\git\TestSol\TestSolDatos\bin\Debug\TestSolDatos.pdb
+C:\git\TestSol\TestSolDatos\bin\Debug\EntityFramework.dll
+C:\git\TestSol\TestSolDatos\bin\Debug\EntityFramework.SqlServer.dll
+C:\git\TestSol\TestSolDatos\bin\Debug\EntityFramework.xml
+C:\git\TestSol\TestSolDatos\bin\Debug\EntityFramework.SqlServer.xml
+C:\git\TestSol\TestSolDatos\obj\Debug\TestSolDatos.csproj.AssemblyReference.cache
+C:\git\TestSol\TestSolDatos\obj\Debug\TestSolDatos.csproj.CoreCompileInputs.cache
+C:\git\TestSol\TestSolDatos\obj\Debug\TestSolDatos.csproj.CopyComplete
+C:\git\TestSol\TestSolDatos\obj\Debug\TestSolDatos.dll
+C:\git\TestSol\TestSolDatos\obj\Debug\TestSolDatos.pdb

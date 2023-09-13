@@ -20,12 +20,9 @@ namespace TestSolReglas.ReglasUtilerias
         {
             get
             {
-                lock (_Instancia)
-                {
-                    if (_Instancia == null)
-                        _Instancia = new ReglasLog();
-                    return _Instancia;
-                }
+                if (_Instancia == null)
+                    _Instancia = new ReglasLog();
+                return _Instancia;
             }
         }
         private ReglasLog() { }
@@ -42,6 +39,7 @@ namespace TestSolReglas.ReglasUtilerias
                     objectoLog.NombreMetodo = Item.NombreMetodo;
                     objectoLog.LineaCodigo = Item.LineaCodigo;
                     objectoLog.MesajeError = Item.MensajeError ;
+                    objectoLog.Fecha_Registro = DateTime.Now;
                     entidad.opeLogs.Add(objectoLog);
                     if (entidad.SaveChanges () > 0)
                     {

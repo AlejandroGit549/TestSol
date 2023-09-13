@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestSolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="catArea">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fecha_Registro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Fecha_Modificacion" Type="DateTime" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="opeEmpleadoes" Relationship="Self.FK_opeEmpleado_catArea" FromRole="catArea" ToRole="opeEmpleado" />
+  </EntityType>
+  <EntityType Name="opeEmpleado">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="25" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ApPaterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ApMaterno" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FkIdArea" Type="Int32" Nullable="false" />
+    <Property Name="Fecha_Nacimiento" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Sueldo" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+    <Property Name="Fecha_Registro" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Fecha_Modificacion" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="catArea" Relationship="Self.FK_opeEmpleado_catArea" FromRole="opeEmpleado" ToRole="catArea" />
+  </EntityType>
+  <Association Name="FK_opeEmpleado_catArea">
+    <End Role="catArea" Type="Self.catArea" Multiplicity="1" />
+    <End Role="opeEmpleado" Type="Self.opeEmpleado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArea">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="opeEmpleado">
+        <PropertyRef Name="FkIdArea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestSolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="catAreas" EntityType="Self.catArea" />
+    <EntitySet Name="opeEmpleadoes" EntityType="Self.opeEmpleado" />
+    <AssociationSet Name="FK_opeEmpleado_catArea" Association="Self.FK_opeEmpleado_catArea">
+      <End Role="catArea" EntitySet="catAreas" />
+      <End Role="opeEmpleado" EntitySet="opeEmpleadoes" />
+    </AssociationSet>
+    <EntitySet Name="opeLogs" EntityType="TestSolModel.opeLog" />
+  </EntityContainer>
+  <EntityType Name="opeLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NombreClase" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="NombreMetodo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LineaCodigo" Type="Int32" Nullable="false" />
+    <Property Name="MesajeError" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Fecha_Registro" Type="DateTime" Nullable="false" Precision="3" />
+  </EntityType>
+</Schema>

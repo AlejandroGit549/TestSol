@@ -21,12 +21,9 @@ namespace TestSolReglas.ReglasEntidades
         {
             get
             {
-                lock (_Instancia)
-                {
-                    if (_Instancia == null)
-                        _Instancia = new ReglasArea();
-                    return _Instancia;
-                }
+                if (_Instancia == null)
+                    _Instancia = new ReglasArea();
+                return _Instancia;
             }
         }
         private ReglasArea() { }
