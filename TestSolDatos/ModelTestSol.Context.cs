@@ -27,5 +27,6 @@ namespace TestSolDatos
     
         public virtual DbSet<catArea> catAreas { get; set; }
         public virtual DbSet<opeEmpleado> opeEmpleadoes { get; set; }
+        public virtual DbSet<opeLog> opeLogs { get; set; }
     }
 }

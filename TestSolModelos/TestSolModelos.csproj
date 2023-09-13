@@ -44,6 +44,7 @@
     <Compile Include="Entidades\Area.cs" />
     <Compile Include="Entidades\ClaseBase.cs" />
     <Compile Include="Entidades\Empleado.cs" />
+    <Compile Include="Entidades\Log.cs" />
     <Compile Include="UtileriaRespuesta\Ayudantes\Enumradores.cs" />
     <Compile Include="UtileriaRespuesta\Ayudantes\MensajesRespuesta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

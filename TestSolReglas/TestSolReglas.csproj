@@ -31,7 +31,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,6 +49,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReglasEntidades\ReglasArea.cs" />
+    <Compile Include="ReglasUtilerias\ReglasLog.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestSolDatos\TestSolDatos.csproj">
+      <Project>{179921b3-f524-4d01-9259-0262368f98f4}</Project>
+      <Name>TestSolDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSolLectoWebConfig\TestSolLectoWebConfig.csproj">
+      <Project>{9c828491-7bdb-43f5-a16a-e4b63eccf258}</Project>
+      <Name>TestSolLectoWebConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSolModelos\TestSolModelos.csproj">
+      <Project>{2CF49D01-DA74-4D2F-A17A-132482CE2FF3}</Project>
+      <Name>TestSolModelos</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

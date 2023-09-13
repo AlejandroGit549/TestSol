@@ -71,6 +71,9 @@
     <Compile Include="opeEmpleado.cs">
       <DependentUpon>ModelTestSol.tt</DependentUpon>
     </Compile>
+    <Compile Include="opeLog.cs">
+      <DependentUpon>ModelTestSol.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
